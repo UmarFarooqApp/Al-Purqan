@@ -1,9 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.Holly.holly_quran">
-   <application
-        android:label="holly_quran"
+    package="com.hmz.al_quran">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:label="The Holy Qur'an"
+        android:icon="@mipmap/launcher_icon">
+              <uses-library
+        android:name="org.apache.http.legacy"
+        android:required="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -19,6 +23,15 @@
             <meta-data
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
+              />
+            <!-- Displays an Android View that continues showing the launch screen
+                 Drawable until Flutter paints its first frame, then this splash
+                 screen fades out. A splash screen is useful to avoid any visual
+                 gap between the end of Android's launch screen and the painting of
+                 Flutter's first frame. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.SplashScreenDrawable"
+              android:resource="@drawable/launch_background"
               />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
